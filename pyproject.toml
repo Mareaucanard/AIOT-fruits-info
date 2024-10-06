@@ -1,0 +1,28 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Marva", email = "matthieu.fraiz@epitech.eu"},
+]
+dependencies = [
+    "fastapi>=0.115.0",
+    "pandas>=2.2.3",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "fastapi[standard]>=0.115.0",
+]
+
+[tool.pdm.scripts]
+dev = "fastapi dev server.py"
+server = "fastapi run server.py"
